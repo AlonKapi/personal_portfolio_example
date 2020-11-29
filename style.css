@@ -1,0 +1,251 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+/*       Nav       */
+
+.nav {
+  background-color: var(--main-red);
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin-right: 1em;
+}
+
+.nav a {
+  display: block;
+  font-size: 1.3rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--main-white);
+  cursor: pointer;
+}
+
+.nav a:hover {
+  background-color: var(--main-blue);
+}
+
+/*       Welcome       */
+
+.welcome-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+.welcome-section h1 {
+  color: var(--main-white);
+  font-size: 3.5rem;
+}
+
+.welcome-section h2 {
+  font-size: 2rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--main-red);
+}
+
+/*       Projects       */
+
+.projects-section {
+  width: 100%;
+  background-color: var(--main-blue);
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.projects-section h1 {
+  color: var(--main-white);
+  max-width: 640px;
+  margin: 0 auto 3rem auto;
+  border-bottom: 0.2rem solid var(--main-white);
+  font-size: 2.5rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 5rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.project-tile {
+  text-decoration: none;
+  background: var(--main-gray);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+
+.project-image {
+  height: calc(100% - 4.1rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-text {
+  background-color: var(--main-gray);
+  color: var(--main-white);
+  font-size: 1.2rem;
+  padding: 1rem 0.5rem;
+}
+
+.show-all {
+  color: var(--main-white);
+  background-color: var(--main-gray);
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.2s linear;
+  border-radius: 3px;
+}
+
+.show-all:hover {
+  background-color: var(--main-red);
+}
+
+.code {
+  color: var(--main-gray);
+  transition: color 0.3s ease-out;
+  margin: 0 0.2em;
+}
+
+.project-tile:hover .code {
+  color: #ff7f50;
+}
+
+/*       Contact       */
+.contact-section {
+  width: 100%;
+  height: 85vh;
+  background-color: var(--main-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-section-header {
+  color: var(--main-white);
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.contact-section-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.1em;
+}
+
+.contact-section-header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  color: var(--main-white);
+  text-decoration: none;
+  padding: 0.5em 0.7em;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+  transform: translateY(8px);
+}
+
+.contact-details i {
+  margin: 0 0.3em;
+}
+
+/*       Footer       */
+
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background: var(--main-gray);
+  border-top: 4px solid var(--main-red);
+}
+
+footer p {
+  color: var(--main-white);
+  font-size: 1.1rem;
+}
+
+footer a {
+  color: var(--main-white);
+  text-decoration: none;
+}
+
+@media (max-width: 1100px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer p {
+    padding: 0.3em;
+  }
+}
